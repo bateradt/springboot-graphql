@@ -2,10 +2,12 @@ package com.monitora.graphql.domain.bank;
 
 import lombok.Builder;
 import lombok.Setter;
+import lombok.Value;
 
 import java.util.List;
 import java.util.UUID;
 
+@Value
 @Setter
 @Builder
 public class Client {
@@ -13,5 +15,5 @@ public class Client {
     String firstName;
     List<String> middleNames;
     String lastName;
-    Client client;
+//    Client client;
 }

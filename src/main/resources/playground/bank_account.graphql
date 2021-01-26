@@ -1,0 +1,12 @@
+# Gets bank account
+#$id é uma variavel que será preenchida de acordo com o valor do JSON
+query GET_BANK_ACCOUNT($id: ID) {
+    bankAccount(id: $id) {
+        currency
+        client {
+            id
+            firstName
+            lastName
+        }
+    }
+}
