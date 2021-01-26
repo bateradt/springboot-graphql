@@ -18,24 +18,24 @@ import java.util.UUID;
 public class BankAccountResolver implements GraphQLQueryResolver {
     public BankAccount bankAccount(UUID id) {
 
-        throw new RuntimeException("Cant connect to the postgresql on AWS: select f, a from bankAccount");
+//        throw new RuntimeException("Cant connect to the postgresql on AWS: select f, a from bankAccount");
 //        throw new GraphQLException("Erro ao buscar dados do BankAccount");
 
-//        log.info("Retrieve bank account ID {}", id);
-//
-//        List<String> list = new ArrayList<>();
-//
-//        list.add("MeioA");
-//
-//        Client clientA = Client.builder().id(UUID.randomUUID()).firstName("Cliente A").middleNames(list).lastName("Nome finalA").build();
-//
-//        list.clear();
-//        list.add("MeioB");
-//
-//        Client clientB = Client.builder().id(UUID.randomUUID()).firstName("Cliente B").middleNames(list).lastName("Nome finalB").client(clientA).build();
-//
-//        clientA.setClient(clientB);
-//
-//        return BankAccount.builder().id(UUID.randomUUID()).currency(Currency.USD).build();
+        log.info("Retrieve bank account ID {}", id);
+
+        List<String> list = new ArrayList<>();
+
+        list.add("MeioA");
+
+        Client clientA = Client.builder().id(UUID.randomUUID()).firstName("Cliente A").middleNames(list).lastName("Nome finalA").build();
+
+        list.clear();
+        list.add("MeioB");
+
+        Client clientB = Client.builder().id(UUID.randomUUID()).firstName("Cliente B").middleNames(list).lastName("Nome finalB").client(clientA).build();
+
+        clientA.setClient(clientB);
+
+        return BankAccount.builder().id(UUID.randomUUID()).currency(Currency.USD).build();
     }
 }
