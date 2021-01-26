@@ -1,0 +1,4 @@
+input CreateBankAccountInput {
+    agency: String
+    number: String
+}
