@@ -1,4 +1,4 @@
-package com.monitora.graphql.resolver;
+package com.monitora.graphql.resolver.bank.query;
 
 import com.monitora.graphql.domain.bank.BankAccount;
 import com.monitora.graphql.domain.bank.Client;
@@ -30,6 +30,6 @@ public class BankAccountResolver implements GraphQLQueryResolver {
 
         clientA.setClient(clientB);
 
-        return BankAccount.builder().id(id).currency(Currency.USD).client(clientB).build();
+        return BankAccount.builder().id(UUID.randomUUID()).currency(Currency.USD).build();
     }
 }
