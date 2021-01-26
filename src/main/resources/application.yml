@@ -7,9 +7,9 @@ server:
     enabled: true
 
 graphql:
-#  servlet:
-#    maxQueryDepth: 5
+  servlet:
 #    exception-handlers-enabled: false
+#    maxQueryDepth: 5
 #    tracingEnabled: false
   playground:
       headers:
