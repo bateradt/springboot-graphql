@@ -1,4 +1,5 @@
 input CreateBankAccountInput {
     agency: String
     number: String
+    age: NonNegativeInt!
 }
