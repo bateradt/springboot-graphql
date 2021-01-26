@@ -1,6 +1,9 @@
 spring:
   application:
     name: springboot-graphql
+  servlet:
+    multipart:
+      max-file-size: 2MB
 
 server:
   http2:
@@ -8,7 +11,7 @@ server:
 
 graphql:
   servlet:
-#    exception-handlers-enabled: false
+    exception-handlers-enabled: true
 #    maxQueryDepth: 5
 #    tracingEnabled: false
   playground:
