@@ -7,12 +7,19 @@ import org.apache.tomcat.util.http.fileupload.impl.FileSizeLimitExceededExceptio
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import javax.validation.ConstraintViolationException;
+
 @Slf4j
 @Component
 public class GraphqlExceptionHandler {
 
     @ExceptionHandler(GraphQLException.class)
     public ThrowableGraphQLError handle(GraphQLException e) {
+        return new ThrowableGraphQLError(e);
+    }
+
+    @ExceptionHandler(ConstraintViolationException.class)
+    public ThrowableGraphQLError handle(Exception e) {
         return new ThrowableGraphQLError(e);
     }
 
