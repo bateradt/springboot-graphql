@@ -35,18 +35,11 @@ public class ClientResolver implements GraphQLResolver<BankAccount> {
                 () -> {
                     log.info("Settings assets fro bank account id {}", bankAccount.getId());
 
-//                    var build = Client.builder().id(UUID.randomUUID())
-//                            .firstName("Cliente novo")
-//                            .lastName("Da Silva").build();
-//                    return build;
-
-
                     return DataFetcherResult.<Client>newResult()
                             .data(Client.builder().id(UUID.randomUUID())
                             .firstName("Cliente novo")
                             .lastName("Da Silva").build())
                             .build();
-
                 },
                 executorService
         );

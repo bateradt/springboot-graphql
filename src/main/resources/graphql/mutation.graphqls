@@ -1,5 +1,7 @@
 # scalar custom types
 scalar NonNegativeInt
+scalar DateTime
+scalar Date
 
 #all mutations available in graphql
 type Mutation {
